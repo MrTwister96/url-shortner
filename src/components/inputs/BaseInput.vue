@@ -1,10 +1,10 @@
 <template>
-	<div class="base-input shadow flex">
+	<div class="base-input shadow-md flex">
 		<input
 			@input="handleInput"
 			:type="type"
 			:placeholder="placeholder"
-			class="w-full p-2 focus:outline-none rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 focus:placeholder-gray-300"
+			class="w-full p-2 focus:outline-none rounded-md focus:ring-4 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 focus:placeholder-gray-300"
 		/>
 	</div>
 </template>
