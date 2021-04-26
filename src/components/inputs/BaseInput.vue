@@ -1,6 +1,11 @@
 <template>
 	<div class="base-input shadow-md flex">
 		<input
+			id="urlInput"
+			oninvalid="this.setCustomValidity('Enter a valid URL')"
+			:name="name"
+			:pattern="pattern"
+			required
 			@input="handleInput"
 			:type="type"
 			:placeholder="placeholder"
@@ -15,6 +20,8 @@ export default {
 		type: { required: false, default: "text" },
 		placeholder: { required: false, default: "" },
 		modelValue: String,
+		pattern: String,
+		name: String,
 	},
 	setup(props, { emit }) {
 		function handleInput(event) {
